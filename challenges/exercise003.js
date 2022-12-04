@@ -1,11 +1,22 @@
 export function getSquares(nums) {
   if (nums === undefined) throw new Error("nums is required");
-  // Your code here!
+
+  return nums.map(num => Math.pow(num,2));
+
 }
 
 export function camelCaseWords(words) {
   if (words === undefined) throw new Error("words is required");
-  // Your code here!
+
+words = words.map((camel,aux) => {
+  if(aux == 0){
+    return(camel);
+  }else{ 
+    return(camel[0].toUpperCase() + camel.slice(1));
+  }
+})
+return words.join("");
+
 }
 
 export function getTotalSubjects(people) {
