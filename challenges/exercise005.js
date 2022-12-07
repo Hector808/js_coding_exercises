@@ -1,11 +1,47 @@
 export const findNextNumber = (nums, n) => {
   if (nums === undefined) throw new Error("nums is required");
   if (n === undefined) throw new Error("n is required");
+  
+  let  index = nums.findIndex(nums => nums === n);
+  if (index == nums.length-1 || nums[index] !== n){
+  return null
+  }else{ 
+      return nums[index+1];
+    } 
+
   // Your code here!
 };
 
 export const count1sand0s = (str) => {
   if (str === undefined) throw new Error("str is required");
+
+  let arr = str.split(''); 
+  let count0 =0;
+  let count1 = 0;
+  let txt;
+  arr.forEach(element => {
+    if (element === "0"){
+      count0 = count0 +1;
+    } else {(element === "1") 
+      count1 = count1 +1; 
+
+    }
+
+  })
+  txt = `{"0":${count0},"1":${count1}}`;
+
+  if (str === ""){
+    return null;
+  } else {
+return txt;
+
+
+    //return ( `{"0" : ${count0}, "1": ${count1} } holaaaa` )   ;
+    
+
+
+  }
+  
   // Your code here!
 };
 
