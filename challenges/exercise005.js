@@ -24,7 +24,6 @@ export const count1sand0s = (str) => {
       count0 = count0 +1;
     } else {(element === "1") 
       count1 = count1 +1; 
-
     }
 
   })
